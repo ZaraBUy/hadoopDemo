@@ -62,7 +62,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.atguigu.mapReduce.WordcountDriver</mainClass>
+                            <mainClass>com.atguigu.wordCount.WordcountDriver</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

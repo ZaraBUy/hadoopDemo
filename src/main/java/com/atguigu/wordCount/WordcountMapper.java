@@ -1,4 +1,4 @@
-package com.atguigu.mapReduce;
+package com.atguigu.wordCount;
 
 
 import org.apache.hadoop.io.IntWritable;

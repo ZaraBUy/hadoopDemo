@@ -41,11 +41,7 @@ public class FlowBean implements Writable {
 
     @Override
     public String toString() {
-        return "FlowBean{" +
-                "upFlow=" + upFlow +
-                ", downFlow=" + downFlow +
-                ", sumFlow=" + sumFlow +
-                '}';
+        return upFlow + "\t" + downFlow + "\t" + sumFlow;
     }
 
     public long getUpFlow() {

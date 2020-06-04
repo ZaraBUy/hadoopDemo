@@ -1,4 +1,4 @@
-package com.atguigu.mapReduce;
+package com.atguigu.wordCount;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -17,6 +17,8 @@ import java.io.IOException;
 public class WordcountDriver {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
+
+        args = new String[]{"D:/hadoop/input/words.txt","D:\\hadoop\\output\\wordCount"};
 
         // 1 获取配置信息以及封装任务
         Configuration configuration = new Configuration();
@@ -39,6 +41,8 @@ public class WordcountDriver {
         // 5 设置最终输出kv类型
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
+
+        job.setCombinerClass(WordCountCombiner.class);
 
         // 6 设置输入和输出路径
         FileInputFormat.setInputPaths(job, new Path(args[0]));
